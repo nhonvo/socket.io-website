@@ -1,238 +1,91 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-const helpItems = [
-  {
-    // using 'type: "doc"' makes the link active whenever the user is on a page from the "/docs" directory
-    // see: https://github.com/facebook/docusaurus/issues/8018
-    label: "Troubleshooting",
-    to: "/docs/v4/troubleshooting-connection-issues/",
-  },
-  {
-    label: "Stack Overflow",
-    href: "https://stackoverflow.com/questions/tagged/socket.io",
-  },
-  {
-    label: "GitHub Discussions",
-    href: "https://github.com/socketio/socket.io/discussions",
-  },
-  {
-    label: "Slack",
-    href: "https://socketio-slackin.herokuapp.com/",
-  },
-];
-
-const toolsItems = [
-  {
-    label: "CDN",
-    href: "https://cdn.socket.io",
-  },
-  {
-    label: "Admin UI",
-    href: "https://admin.socket.io",
-  },
-];
-
-const newsItems = [
-  {
-    label: "Blog",
-    to: "/blog",
-  },
-  {
-    label: "Twitter",
-    href: "https://twitter.com/SocketIO",
-  },
-];
-
-const aboutItems = [
-  {
-    label: "FAQ",
-    to: "/docs/v4/faq/",
-  },
-  {
-    label: "Changelog",
-    to: "/docs/v4/changelog/",
-  },
-  {
-    label: "Roadmap",
-    href: "https://github.com/orgs/socketio/projects/3",
-  },
-  {
-    label: "Become a sponsor",
-    href: "https://opencollective.com/socketio",
-  },
-];
-
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "Socket.IO",
-  tagline: "Dinosaurs are cool",
+  title: "Code with Nolan",
+  tagline: "Becoming the Senior Developer",
   url: "https://nhonvo.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "images/favicon.png",
+  favicon: "images/favicon.ico",
   organizationName: "nhonvo",
   projectName: "nhonvo.github.io",
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      {
+        docs: false,
+        pages: false,
+        blog: {
+          routeBasePath: '/',
+          path: 'blog',
+          editUrl: "https://github.com/nhonvo/nhonvo.github.io/edit/main/blog/",
+          include: ['**/*.{md,mdx}'],
+          exclude: ['**/_*.{md,mdx}'],
+          showReadingTime: true,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Posts',
+          postsPerPage: 5,
+          blogTitle: 'My Blog',
+          blogDescription: 'A place to share my knowledge',
+          feedOptions: {
+            type: 'all',
+            title: 'Code with Nolan Blog',
+            description: 'Stay updated with the latest posts from Code with Nolan.',
+            copyright: `Copyright © ${new Date().getFullYear()} Nhonvo`,
+          },
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
+  ],
   themeConfig: {
     navbar: {
-      title: "Socket.IO",
+      title: "Code with Nolan",
       hideOnScroll: true,
       logo: {
-        alt: "Socket.IO logo",
-        src: "images/logo.svg",
-        srcDark: "images/logo-dark.svg",
+        alt: "Nolan Logo",
+        src: "images/128.png",
+        srcDark: "images/128.png",
       },
       items: [
         {
-          type: "dropdown",
-          label: "Docs",
-          position: "left",
+          to: '/', 
+          label: 'Blog',
+          position: 'left',
+          activeBaseRegex: '^/$',
+        },
+        {
+          to: 'tags',
+          label: 'Tags',
+          position: 'left',
+          activeBasePath: 'tags',
+        },
+        {
+          label: 'More',
+          position: 'left',
           items: [
             {
-              type: "doc",
-              label: "Guide",
-              docId: "categories/Documentation/index",
+              label: 'GitHub',
+              href: 'https://github.com/nhonvo',
             },
             {
-              type: "doc",
-              label: "Tutorial",
-              docId: "tutorial/introduction",
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/truongnhon/',
             },
-            {
-              label: "Examples",
-              to: "/get-started/",
-            },
-            {
-              type: "doc",
-              label: "Emit cheatsheet",
-              docId: "emit-cheatsheet"
-            }
-          ]
-        },
-        {
-          type: "doc",
-          docId: "server-api",
-          position: "left",
-          label: "Server API",
-        },
-        {
-          type: "doc",
-          docId: "client-api",
-          position: "left",
-          label: "Client API",
-        },
-        {
-          type: "dropdown",
-          label: "Ecosystem",
-          position: "left",
-          items: [
-            {
-              type: "html",
-              className: "dropdown-category",
-              value: "<b>Help</b>",
-            },
-            ...helpItems,
-            {
-              type: "html",
-              value: '<hr class="dropdown-separator">',
-            },
-            {
-              type: "html",
-              className: "dropdown-category",
-              value: "<b>News</b>",
-            },
-            ...newsItems,
-            {
-              type: "html",
-              value: '<hr class="dropdown-separator">',
-            },
-            {
-              type: "html",
-              className: "dropdown-category",
-              value: "<b>Tools</b>",
-            },
-            ...toolsItems,
           ],
         },
         {
-          type: "dropdown",
-          label: "About",
-          position: "left",
-          items: aboutItems,
-        },
-        {
-          type: "docsVersionDropdown",
-          position: "right",
-          dropdownItemsAfter: [
-            {
-              type: "html",
-              value: '<hr class="dropdown-separator">',
-            },
-            {
-              label: "Changelog",
-              to: "/docs/v4/changelog/",
-              activeBaseRegex: 'never',
-            }
-          ],
-        },
-        {
-          type: "localeDropdown",
-          position: "right",
-        },
-        {
-          href: "https://github.com/socketio/socket.io",
-          position: "right",
-          className: "header-github-link",
+          href: 'https://nhonvo.github.io/portfolio/',
+          label: 'Portfolio',
+          position: 'right',
         },
       ],
-    },
-    footer: {
-      style: "dark",
-      links: [
-        {
-          title: "Documentation",
-          items: [
-            {
-              label: "Guide",
-              to: "/docs/v4/",
-            },
-            {
-              label: "Tutorial",
-              to: "/docs/v4/tutorial/introduction",
-            },
-            {
-              label: "Examples",
-              to: "/get-started/",
-            },
-            {
-              label: "Server API",
-              to: "/docs/v4/server-api/",
-            },
-            {
-              label: "Client API",
-              to: "/docs/v4/client-api/",
-            },
-          ],
-        },
-        {
-          title: "Help",
-          items: helpItems,
-        },
-        {
-          title: "News",
-          items: newsItems,
-        },
-        {
-          title: "Tools",
-          items: toolsItems,
-        },
-        {
-          title: "About",
-          items: aboutItems,
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Socket.IO`,
     },
     colorMode: {
       defaultMode: 'light',
@@ -243,68 +96,12 @@ module.exports = {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
-    algolia: {
-      apiKey: "bcf148e965eaca9ed2e6868a50a9e42c",
-      appId: "ZM7QMFKQCJ",
-      indexName: "socket_io",
-    },
-    announcementBar: {
-      content:
-        'Latest blog post (July 25, 2024): <a href="/blog/npm-package-provenance/">npm package provenance</a>.',
-      backgroundColor: "#25c2a0",
-      isCloseable: true,
-    },
   },
-  presets: [
-    [
-      "@docusaurus/preset-classic",
-      {
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          showLastUpdateTime: true,
-          editUrl: "https://github.com/socketio/nhonvo.github.io/edit/main/",
-          lastVersion: "current",
-          versions: {
-            current: {
-              label: "4.x",
-              path: "v4",
-            },
-            "3.x": {
-              label: "3.x",
-              path: "v3",
-            },
-            "2.x": {
-              label: "2.x",
-              path: "v2",
-            },
-          },
-          sidebarItemsGenerator({
-            isCategoryIndex: defaultCategoryIndexMatcher,
-            defaultSidebarItemsGenerator,
-            ...args
-          }) {
-            return defaultSidebarItemsGenerator({
-              ...args,
-              isCategoryIndex() {
-                return false;
-              },
-            });
-          },
-        },
-        blog: {
-          showReadingTime: true,
-          editUrl: "https://github.com/socketio/nhonvo.github.io/edit/main/",
-          blogSidebarCount: 10,
-        },
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-      },
-    ],
-  ],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
-    // locales: ["en", "fr", "pt-br", "zh-CN"],
-  }
+  },
+  plugins: [
+    'docusaurus-lunr-search',
+  ],
 };
