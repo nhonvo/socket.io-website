@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksample_website=self.webpackChunksample_website||[]).push([[8400],{5906:e=>{e.exports=JSON.parse('{"label":"sqlserver","permalink":"/tags/sqlserver","allTagsPath":"/tags","count":1}')}}]);

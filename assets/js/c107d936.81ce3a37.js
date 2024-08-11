@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksample_website=self.webpackChunksample_website||[]).push([[9134],{3932:e=>{e.exports=JSON.parse('{"permalink":"/tags/programming","page":1,"postsPerPage":5,"totalPages":1,"totalCount":1,"blogDescription":"A place to share my knowledge","blogTitle":"My Blog"}')}}]);
