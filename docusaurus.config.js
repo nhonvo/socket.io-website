@@ -67,13 +67,13 @@ const aboutItems = [
 module.exports = {
   title: "Socket.IO",
   tagline: "Dinosaurs are cool",
-  url: "https://socket.io",
+  url: "https://nhonvo.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "images/favicon.png",
-  organizationName: "socketio",
-  projectName: "socket.io",
+  organizationName: "nhonvo",
+  projectName: "nhonvo.github.io",
   themeConfig: {
     navbar: {
       title: "Socket.IO",
@@ -262,7 +262,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           showLastUpdateTime: true,
-          editUrl: "https://github.com/socketio/socket.io-website/edit/main/",
+          editUrl: "https://github.com/socketio/nhonvo.github.io/edit/main/",
           lastVersion: "current",
           versions: {
             current: {
@@ -293,7 +293,7 @@ module.exports = {
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/socketio/socket.io-website/edit/main/",
+          editUrl: "https://github.com/socketio/nhonvo.github.io/edit/main/",
           blogSidebarCount: 10,
         },
         theme: {
@@ -304,6 +304,7 @@ module.exports = {
   ],
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "fr", "pt-br", "zh-CN"],
+    locales: ["en"],
+    // locales: ["en", "fr", "pt-br", "zh-CN"],
   }
 };
