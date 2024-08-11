@@ -4,8 +4,8 @@
   <ShortName>Socket.IO</ShortName>
   <Description>Search Socket.IO</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">http://socket.io-website.github.io/images/favicon.png</Image>
-  <Url type="text/html" method="get" template="http://socket.io-website.github.io/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="http://socket.io-website.github.io/opensearch.xml" />
-  <moz:SearchForm>http://socket.io-website.github.io/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://nhonvo.github.io/socket.io-website/images/favicon.png</Image>
+  <Url type="text/html" method="get" template="https://nhonvo.github.io/socket.io-website/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://nhonvo.github.io/socket.io-website/opensearch.xml" />
+  <moz:SearchForm>https://nhonvo.github.io/socket.io-website/</moz:SearchForm>
 </OpenSearchDescription>
