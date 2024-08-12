@@ -78,6 +78,10 @@ module.exports = {
               label: 'LinkedIn',
               href: 'https://www.linkedin.com/in/truongnhon/',
             },
+            {
+              label: 'Phonemic Chart',
+              href: '/PhonemicChart'
+            }
           ],
         },
         {
@@ -96,10 +100,6 @@ module.exports = {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
-  },
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
   },
   plugins: [
     'docusaurus-lunr-search',
