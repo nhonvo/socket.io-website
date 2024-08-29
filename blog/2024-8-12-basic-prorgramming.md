@@ -347,9 +347,11 @@ int main() {
 - c. Xuất ra màn hình các số lẻ không chia hết cho 3 trong phạm vi từ 1 đến n.
 - d. Tính các biểu thức sau:
 
-S3 = 1/2 + 2/3 + 3/4 + ...
-S4 = x^n (với x là số thực nhập từ bàn phím).
-e. Tính tổng các chữ số của n. Ví dụ: n = 125, tổng các chữ số là 1 + 2 + 5 = 8.
+`S3 = 1/2 + 2/3 + 3/4 + ...`
+
+`S4 = x^n (với x là số thực nhập từ bàn phím).`
+
+- e. Tính tổng các chữ số của n. Ví dụ: n = 125, tổng các chữ số là 1 + 2 + 5 = 8.
 
 **Câu 6:** Viết chương trình thực hiện:
 
@@ -690,11 +692,12 @@ int main() {
 - e. So sánh 2 phần số.
 
 **Câu 2:** Làm tiếp câu 1, cài đặt các hàm sau:
-a. Nhập vào dãy phần số.
-b. Xuất dãy phần số.
-c. Tính tổng dãy.
-d. Tìm phần số lớn nhất.
-e. Sắp xếp dãy phần số tăng dần.
+
+- a. Nhập vào dãy phần số.
+- b. Xuất dãy phần số.
+- c. Tính tổng dãy.
+- d. Tìm phần số lớn nhất.
+- e. Sắp xếp dãy phần số tăng dần.
 
 **Câu 3:** Viết hàm nhập dữ liệu cho một sinh viên, thông tin về sinh viên gồm:
 

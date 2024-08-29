@@ -85,8 +85,8 @@ module.exports = {
           ],
         },
         {
-          href: 'https://nhonvo.github.io/portfolio/',
-          label: 'Portfolio',
+          href: 'https://nhonvo.github.io/profile/',
+          label: 'Profile',
           position: 'right',
         },
       ],
